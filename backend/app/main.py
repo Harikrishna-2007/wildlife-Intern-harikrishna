@@ -5,6 +5,13 @@ from fastapi import FastAPI, File, UploadFile
 from pydantic import BaseModel, Field
 
 from app.core.scoring import ecosystem_health_score
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"status": "ok"}
 
 app = FastAPI(
     title="Wildlife Population Intelligence Inference API",
