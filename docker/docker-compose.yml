@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: wildlife
+      POSTGRES_USER: wildlife
+      POSTGRES_PASSWORD: wildlife
+    ports:
+      - "5432:5432"
+    volumes:
+      - wildlife-postgres:/var/lib/postgresql/data
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - wildlife-mongo:/data/db
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+  api:
+    build:
+      context: ..
+      dockerfile: docker/api.Dockerfile
+    environment:
+      DATABASE_URL: postgresql://wildlife:wildlife@postgres:5432/wildlife
+      MONGODB_URL: mongodb://mongo:27017/wildlife
+      REDIS_URL: redis://redis:6379
+    depends_on: [postgres, mongo, redis]
+    ports:
+      - "8000:8000"
+volumes:
+  wildlife-postgres:
+  wildlife-mongo:

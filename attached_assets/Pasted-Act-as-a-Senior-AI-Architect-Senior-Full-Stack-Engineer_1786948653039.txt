@@ -1,0 +1,392 @@
+Act as a Senior AI Architect, Senior Full-Stack Engineer, GIS Engineer, DevOps Engineer, and Wildlife Data Scientist.
+
+You are upgrading my EXISTING Wildlife Population Intelligence System.
+
+DO NOT rebuild the project from scratch.
+
+Analyze the current codebase and improve it while preserving all existing functionality.
+
+====================================================
+PROJECT GOAL
+====================================================
+
+Transform the current Wildlife Population Intelligence System into a production-grade AI-powered wildlife monitoring platform.
+
+The system must support:
+
+1. Wildlife Image Recognition
+2. Wildlife Audio Recognition
+3. Species Intelligence Database
+4. GIS Mapping
+5. Biodiversity Analytics
+6. Survey Management
+7. Observation Tracking
+8. AI Reports
+9. Authentication & RBAC
+10. Conservation Intelligence Dashboard
+
+====================================================
+IMAGE ANALYSIS MODULE
+====================================================
+
+Upgrade Media Analysis.
+
+Features:
+
+- Drag and Drop Upload
+- Image Preview
+- JPG
+- JPEG
+- PNG
+
+Backend Endpoint:
+
+POST /api/v1/analyze/image
+
+Workflow:
+
+1. Upload image
+2. Store image
+3. Run YOLOv8 inference
+4. Detect species
+5. Save observation
+6. Return species information
+
+Display:
+
+- Bounding Boxes
+- Species Name
+- Scientific Name
+- Confidence Score
+- Number of Animals Detected
+- Detection Timestamp
+
+Draw bounding boxes directly on uploaded image.
+
+Supported Species:
+
+- Elephant
+- Tiger
+- Lion
+- Leopard
+- Deer
+- Bear
+- Wolf
+- Fox
+- Monkey
+- Zebra
+- Giraffe
+- Rhino
+- Peacock
+- Eagle
+
+====================================================
+AUDIO ANALYSIS MODULE
+====================================================
+
+Add complete audio recognition.
+
+Supported Files:
+
+- WAV
+- MP3
+
+Workflow:
+
+1. Upload audio
+2. Extract MFCC features
+3. Run BirdNET
+4. Run YAMNet
+5. Predict species
+
+Display:
+
+- Species Name
+- Confidence
+- Audio Type
+- Scientific Name
+- Habitat
+- Conservation Status
+
+Create endpoint:
+
+POST /api/v1/analyze/audio
+
+====================================================
+SPECIES INTELLIGENCE DATABASE
+====================================================
+
+Create Species Details Page.
+
+Display:
+
+- Common Name
+- Scientific Name
+- Family
+- Genus
+- Conservation Status
+- IUCN Category
+- Population Trend
+- Habitat
+- Diet
+- Average Lifespan
+- Geographic Distribution
+- Threats
+- Conservation Recommendations
+
+Add search functionality.
+
+====================================================
+OBSERVATION MANAGEMENT
+====================================================
+
+Create Observation System.
+
+Store:
+
+- Species
+- Image
+- Audio
+- Confidence
+- Latitude
+- Longitude
+- Timestamp
+- Survey ID
+
+Create:
+
+GET /api/v1/observations
+POST /api/v1/observations
+
+====================================================
+GIS MODULE
+====================================================
+
+Upgrade Leaflet Map.
+
+Features:
+
+- Observation Markers
+- Heatmap Layer
+- Cluster Layer
+- Endangered Species Layer
+- Survey Boundaries
+- Species Filter
+- Date Filter
+
+Display real observation locations.
+
+====================================================
+BIODIVERSITY ANALYTICS
+====================================================
+
+Create Analytics Dashboard.
+
+Metrics:
+
+- Total Species
+- Total Observations
+- Endangered Species Count
+- Active Surveys
+- Ecosystem Health Score
+
+Charts:
+
+- Species Distribution
+- Monthly Trends
+- Habitat Distribution
+- Observation Trends
+- Conservation Status Breakdown
+
+Calculate:
+
+Shannon Diversity Index
+Simpson Diversity Index
+Species Richness
+
+====================================================
+AI REPORT GENERATION
+====================================================
+
+Create PDF Reports.
+
+Generate:
+
+Survey Report
+Species Report
+Observation Report
+
+Include:
+
+- Statistics
+- Charts
+- Maps
+- Biodiversity Metrics
+- Recommendations
+
+Export PDF.
+
+====================================================
+ALERT SYSTEM
+====================================================
+
+Create Wildlife Alerts.
+
+Trigger alerts when:
+
+- Endangered Species Detected
+- Rare Species Detected
+- Population Decline Detected
+- Habitat Risk Detected
+
+Show notifications in dashboard.
+
+====================================================
+AUTHENTICATION
+====================================================
+
+Implement:
+
+- Register
+- Login
+- Logout
+- JWT Authentication
+
+Roles:
+
+ADMIN
+RESEARCHER
+FIELD_OFFICER
+
+Implement RBAC.
+
+====================================================
+DATABASE
+====================================================
+
+PostgreSQL + PostGIS
+
+Tables:
+
+users
+species
+surveys
+observations
+alerts
+reports
+devices
+
+Create proper relationships.
+
+Generate migrations.
+
+====================================================
+AI SERVICES
+====================================================
+
+Create:
+
+image_classifier.py
+audio_classifier.py
+biodiversity_engine.py
+health_scoring_engine.py
+report_generator.py
+
+====================================================
+DASHBOARD
+====================================================
+
+Create executive dashboard.
+
+Cards:
+
+- Ecosystem Health
+- Species Richness
+- Total Observations
+- Active Surveys
+- Endangered Alerts
+
+Show charts and maps.
+
+====================================================
+UI IMPROVEMENTS
+====================================================
+
+Keep existing design.
+
+Improve:
+
+- Responsive layout
+- Dark mode
+- Loading states
+- Skeleton components
+- Error handling
+- Toast notifications
+
+Use modern professional styling.
+
+====================================================
+DEVOPS
+====================================================
+
+Verify:
+
+Docker
+Docker Compose
+FastAPI
+Next.js
+PostgreSQL
+PostGIS
+Redis
+Celery
+
+Fix all import issues.
+
+Fix all build issues.
+
+Fix all dependency issues.
+
+====================================================
+TESTING
+====================================================
+
+Add:
+
+Unit Tests
+API Tests
+Frontend Tests
+
+====================================================
+FINAL REQUIREMENT
+====================================================
+
+Analyze existing codebase.
+
+Modify existing files.
+
+Create missing files.
+
+Update routes.
+
+Update database schema.
+
+Update frontend pages.
+
+Update navigation.
+
+Update dashboard.
+
+Provide production-ready implementation.
+
+Do not generate mock placeholders unless required.
+
+Implement real working functionality wherever possible.
+
+After implementation:
+
+1. Run dependency validation.
+2. Run build validation.
+3. Run import validation.
+4. Run route validation.
+5. Fix detected issues automatically.
+6. Produce final project status report.
